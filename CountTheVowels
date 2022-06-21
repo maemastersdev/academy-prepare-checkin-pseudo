@@ -1,5 +1,10 @@
 /*
-  Pseudocode
+Assuming there is a word, ie. the original string is not empty.
+There might be no vowels, returns "There are no vowels" rather than counting and returning 0.
+/*
+
+/*
+Pseudocode
 -----
   define CountTheVowels
     parameters:
@@ -8,19 +13,23 @@
       - NUMBER_OF_VOWELS, number
 
     set ARR_OF_VOWELS_IN_WORD to ExtractTheVowels(WORD)
+    
+    if ARR_OF_VOWELS_IN_WORD is an empty array
+      return "There are no vowels."
+    end if 
 
     set NUMBER_OF_VOWELS to be LengthOfArray(ARR_OF_VOWELS_IN_WORD)
-
+    
     return NUMBER_OF_VOWELS
   end define
 -----
   define ExtractTheVowels
     parameters:
       - WORD, string
-      - LETTERS_TO_COUNT, array of letters, in this case ["a","e","i","o","u"]
+      - LETTERS_TO_COUNT, array of characters, in this case ["a","e","i","o","u"]
 
     returns:
-      - ARR_OF_VOWELS_IN_WORD, array of strings
+      - ARR_OF_VOWELS_IN_WORD, array of characters
 
     set ARR_OF_VOWELS_IN_WORD to be an empty array
 
@@ -35,9 +44,9 @@
   -----
   define LengthOfArray
    parameters:
-      - ARR_OF_VOWELS_IN_WORD
+      - ARR_OF_VOWELS_IN_WORD, array of characters
    returns:
-       - NUMBERS_OF_VOWELS
+       - NUMBERS_OF_VOWELS, number
 
    set NUMBER_OF_VOWELS to 0
   
