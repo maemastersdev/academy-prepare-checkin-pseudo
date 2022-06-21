@@ -1,0 +1,58 @@
+/*
+Given a list of numbers and a target factor, let's invent a process to find the first number which is a multiple of that factor. 
+Assuming at least one number will be a multiple.
+Therefore, also assuming the list isn't empty.
+Assuming the target factor is a whole, positive number (not 0).
+Assuming the list of numbers only contains whole, positive numbers (not 0).
+Haven't included any early returns because we are assuming at least one number is a multiple.
+
+Defining main function
+
+Examples
+
+FindFirstMultiple[4, 10, 8, 9, 0, 12], 3 -> 9
+FindFirstMultiple[10, 20, 30, 40], 4 -> 20 
+FindFirstMultiple[2, 3, 4, 5, 6], 2 -> 2
+
+Defining a helper function to produce an array of all the multiples 
+
+Examples
+
+FindTheMultiples[4, 10, 8, 9, 0, 12], 3 -> [9, 12]
+FindTheMultiples[10, 20, 30, 40], 4 -> [20, 40]
+FindTheMultiples[2, 3, 4, 5, 6], 2 -> [2, 4, 6]
+*/
+
+/* 
+Pseudocode
+
+define FindFirstMultiple
+  parameters:
+    - LIST_OF_NUMBERS, list of numbers
+    - TARGET_FACTOR, number
+  returns:
+    - FIRST_MULTIPLE, number
+  
+  set ARR_OF_NUMBERS to be an array of all whole, positive numbers in LIST_OF_NUMBERS
+  set ARR_OF_MULTIPLES to be FindTheMultiples(ARR_OF_NUMBERS)
+  set FIRST_MULTIPLE to be the first element in array ARR_OF_MULTIPLES
+  
+  return FIRST_MULTIPLE
+end define
+-----
+define FindTheMultiples
+  parameters:
+    - ARR_OF_NUMBERS, array of numbers
+    - TARGET_FACTOR, number
+  returns:
+    - ARR_OF_MULTIPLES, array of numbers
+  
+  set ARR_OF_MULTIPLES to be an empty array
+  
+  for each number in ARR_OF_NUMBERS
+    if number/target factor has no remainder
+      append number to ARR_OF_MULTIPLES
+  end for each
+end define
+-----
+*/
