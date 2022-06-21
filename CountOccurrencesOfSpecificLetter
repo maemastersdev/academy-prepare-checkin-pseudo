@@ -3,7 +3,9 @@ I've defined one main function and two helper functions.
 -----
 CountOccurrencesOfSpecificLetter: a function to count the occurrences of the specific letter and return a numerical value.
 I have assumed: lists only include words with lowercase alphabetical characters, list can be of any length, list rather than an array.
-If new array is empty, returns "There are no occurrences of this specific letter."
+If there are no letters- returns "There are no letters at all"
+If there are no occurences of specific letter- returns "There are no occurrences of this specific letter."
+Otherwise proceeds
 Examples
 ["hello", "are", "you", "there"], "r" -> 2
 ["the", "cat", "sat", "on", "the", "mat"], "a" -> 5
@@ -33,9 +35,18 @@ define CountOccurrencesOfSpecificLetter
     
   set LIST_OF_LETTERS to be a list of all the alphabetical characters in the list LIST_OF_WORDS
   set ARR_OF_LETTERS to be an array of all the elements in the list LIST_OF_LETTERS
-  set ARR_OF_SPECIFIC_LETTER_OCCURRENCES to be ExtractSpecificLetter(ARR_OF_LETTERS)
-  set COUNT_OF_SPECIFIC_LETTER to be LengthOfArray(ARR_OF_SPECIFIC_LETTER_OCCURRENCES)
   
+  if ARR_OF_LETTERS is an empty array
+    return "There are no letters at all."
+  end if
+
+  set ARR_OF_SPECIFIC_LETTER_OCCURRENCES to be ExtractSpecificLetter(ARR_OF_LETTERS)
+  
+  if ARR_OF_SPECIFIC_LETTER_OCCURENCES is an empty array
+    return "There are no occurences of this specific letter."
+  end if 
+  
+  set COUNT_OF_SPECIFIC_LETTER to be LengthOfArray(ARR_OF_SPECIFIC_LETTER_OCCURRENCES)
   return COUNT_OF_SPECIFIC_LETTER
 end define
 -----
