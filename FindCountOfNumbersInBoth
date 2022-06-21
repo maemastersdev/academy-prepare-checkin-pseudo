@@ -1,0 +1,60 @@
+/*
+NOTES
+produce an array of numbers that occur in both lists
+find the length of that new array - provides count of numbers occuring in both lists
+assuming input arrays of numbers can be of any length
+The problem has used the word 'list' but I'm assuming here that the input is an array.
+assuming inputs are arrays of numbers, no non-numerical values
+Used a for each method, could probably just make a new array that is produced by filtering one array by the numbers occuring in the second array,
+then find the length of that new array in same way as below
+NEED TO ADD- Early returns
+*/
+
+/*
+Pseudocode
+
+----
+define FindCountOfNumbersInBoth
+  parameters:
+    - ARR_FIRST_SET_OF_NUMBERS, array of numbers
+    - ARR_SECOND_SET_OF_NUMBERS, array of numbers
+  returns:
+    - COUNT_OF_NUMBERS_IN_BOTH_ARRAYS, number
+
+  set ARR_NUMBERS_IN_BOTH to be ExtractNumbersInBoth(ARR_FIRST_SET_OF_NUMBERS,ARR_SECOND_SET_OF_NUMBERS)
+  set COUNT_OF_NUMBERS_IN_BOTH_ARRAYS to be the LengthOfArray(ARR_NUMBERS_IN_BOTH)
+
+  return COUNT_OF_NUMBERS_IN_BOTH_ARRAYS
+end define
+------
+define ExtractNumbersInBoth
+  parameters:
+    - ARR_FIRST_SET_OF_NUMBERS, array of numbers
+    - ARR_SECOND_SET_OF_NUMBERS, array of numbers
+  returns:
+    - ARR_NUMBERS_IN_BOTH, array of numbers
+
+  set ARR_NUMBERS_IN_BOTH to be an empty array
+
+  for each number in ARR_FIRST_SET_OF_NUMBERS
+    if ARR_SECOND_SET_OF_NUMBERS includes that number
+      append number to ARR_NUMBERS_IN_BOTH
+      end for each
+
+  return ARR_NUMBERS_IN_BOTH
+end define
+------
+define LengthOfArray
+  parameters:
+    - ARR_NUMBERS_IN_BOTH, array of numbers
+  returns:
+    - COUNT_OF_NUMBERS_IN_BOTH_ARRAYS, number
+
+  set COUNT_OF_NUMBERS_IN_BOTH_ARRAYS to 0
+  for each NUMBER in ARR_NUMBERS_IN_BOTH
+    set COUNT_OF_NUMBERS_IN_BOTH_ARRAYS to COUNT_OF_NUMBERS_IN_BOTH_ARRAYS + 1
+  end for each
+
+  return COUNT_OF_NUMBERS_IN_BOTH_ARRAYS
+end define
+*/
