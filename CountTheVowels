@@ -1,0 +1,51 @@
+/*
+  Pseudocode
+-----
+  define CountTheVowels
+    parameters:
+      - WORD, string
+    returns:
+      - NUMBER_OF_VOWELS, number
+
+    set ARR_OF_VOWELS_IN_WORD to ExtractTheVowels(WORD)
+
+    set NUMBER_OF_VOWELS to be LengthOfArray(ARR_OF_VOWELS_IN_WORD)
+
+    return NUMBER_OF_VOWELS
+  end define
+-----
+  define ExtractTheVowels
+    parameters:
+      - WORD, string
+      - LETTERS_TO_COUNT, array of letters, in this case ["a","e","i","o","u"]
+
+    returns:
+      - ARR_OF_VOWELS_IN_WORD, array of strings
+
+    set ARR_OF_VOWELS_IN_WORD to be an empty array
+
+    for each CHAR in WORD
+      if LETTERS_TO_COUNT includes CHAR
+        append CHAR to ARR_OF_VOWELS
+    end for each
+
+    return ARR_OF_VOWELS
+
+  end define
+  -----
+  define LengthOfArray
+   parameters:
+      - ARR_OF_VOWELS_IN_WORD
+   returns:
+       - NUMBERS_OF_VOWELS
+
+   set NUMBER_OF_VOWELS to 0
+  
+   for each CHAR in ARR_OF_VOWELS_IN_WORD
+     set NUMBER_OF_VOWELS to NUMBER_OF_VOWELS + 1
+   end for each
+
+   return NUMBERS_OF_VOWELS
+  end define
+  ------
+*/
