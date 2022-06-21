@@ -2,7 +2,8 @@
   Create a (main) function to find the mean of an array of numbers
   I'm assuming that the input will be a list which I make an array from.
   Assuming that there will be no non-numerical inputs
-
+  Assuming list of numbers won't be empty.
+  
   Examples
   MeanOfNumbers([4,-1,0,10,5]) -> 3.6
 
