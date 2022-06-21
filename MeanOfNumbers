@@ -1,0 +1,69 @@
+/*
+  Create a (main) function to find the mean of an array of numbers
+  I'm assuming that the input will be a list which I make an array from.
+  Assuming that there will be no non-numerical inputs
+
+  Examples
+  MeanOfNumbers([4,-1,0,10,5]) -> 3.6
+
+  Create a helper function that finds the sum of the array of numbers
+
+  Examples
+  SumOfArray([4,-1,0,10,5]) -> 18
+
+  Create a helper function that finds the length of the array of numbers
+
+  Examples
+  LengthOfArray([4,-1,0,10,5]) -> 5
+*/
+
+/*
+  Pseudocode
+
+  ----
+  define MeanOfNumbers
+  parameters:
+    - NUMBERS_TO_AVG_LIST, list of numbers
+
+  returns:
+    - MEAN_VALUE, number
+
+  Set NUMBERS_TO_AVG_ARR to be an array of all the numbers in list NUMBERS_TO_AVG_LIST
+  Set SUM_OF_VALUES to SumOfArray(NUMBERS_TO_AVG_ARR)
+  Set NUMBER_OF_VALUES to LengthOfArray(NUMBERS_TO_AVG_ARR)
+  Set MEAN_VALUE to SUM_OF_VALUES / NUMBER_OF_VALUES
+
+  Return MEAN_VALUE
+  end define
+  ----
+
+  define SumOfArray
+  parameters:
+    - NUMBERS_TO_AVG_ARR, array of numbers
+  returns:
+    - SUM_OF_VALUES, number
+
+  Set SUM_OF_VALUES to 0
+  For each NUMBER in NUMBERS_TO_AVG_ARR
+    set SUM_OF_VALUES to SUM_OF_VALUES + NUMBER
+  end for each
+
+  return SUM_OF_VALUES
+  end define
+----
+
+  define LengthOfArray
+  parameters:
+    - NUMBERS_TO_AVG_ARR, array of numbers
+  returns:
+    - NUMBER_OF_VALUES, number
+
+  SET NUMBER_OF_VALUES to 0
+  For each NUMBER in NUMBERS_TO_AVG_ARR
+    set NUMBER_OF_VALUES to NUMBER_OF_VALUES + 1
+  end for each
+
+  return NUMBER_OF_VALUES
+  end define
+  ----
+*/
